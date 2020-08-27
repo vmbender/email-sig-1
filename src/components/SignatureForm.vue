@@ -16,7 +16,7 @@
           <b-form-select required id="deptfield" v-model="dept" type="text" :options="departments"></b-form-select>
         </b-form-group>
         <b-form-group id="phonegroup" label="Office Phone" label-for="phonefield">
-          <b-form-input id="phonefield" v-model="phone" maxlength="12" type="tel" :placeholder="pphone" v-facade="'###.###.####'"></b-form-input>
+          <b-form-input id="phonefield" v-model="phone" maxlength="12" type="tel" :placeholder="pphone" :formatter="phoneformat"></b-form-input>
         </b-form-group>
         <b-form-group id="emailgroup" label="Email Address" label-for="emailfield">
           <b-form-input id="emailfield" v-model="email" type="email" placeholder="Your email address" :formatter="emailformat"></b-form-input>
@@ -100,6 +100,7 @@ export default {
         'Environmental Health & Safety',
         'Facilities, Risk & Services',
         'Faculty Senate',
+        'Finance and Administration',
         'Financial Aid Office',
         'Financial Planning & Budget Development',
         'Geology & Geological Engineering',
@@ -124,6 +125,7 @@ export default {
         'Office of Graduate Education',
 '        Office of Research Affairs',
         'Office of Sponsored Programs',
+        'Office of the President',
         'Office of the Provost',
         'Office of the Registrar',
         'Physical Education',
@@ -152,14 +154,20 @@ export default {
   filters:{
   },
   methods: { 
+    
+    caps(val){
+      val = val.toString()
+      return val.toUpperCase()
+    },
+    
     emailformat(value){
       value = value.toString()
       return value.replace(/^\w/, this.caps).replace(/\.\w/, this.caps)
     },
     
-    caps(val){
-      val = val.toString()
-      return val.toUpperCase()
+    phoneformat(value){
+      value = value.toString()
+      return value.replace(/\D/g,'').replace(/(\d{3})(\d)/,'$1.$2').replace(/(\d{3}.)(\d{3})(\d)/,'$1$2.$3')
     },
     
     onClick() {
