@@ -29,7 +29,7 @@
           <div id="signature-template">
             <div style="color:#75787B; font-size: 12px;">
               <p style="color: #002554; font-size: 18px; line-height: 1;"><span style="font-family: Arial, Helvetica, sans-serif;"><strong>{{ dname }}</strong>, <span style="font-size: 14px;">{{ dtitle }}</span></span></p>
-              <p style="margin-top: 0.5em; margin-bottom: 0.5em; line-height: 1;"><strong style="font-family: Arial, Helvetica, sans-serif;">{{ ddept }}</strong></p>
+              <p style="margin-top: 0.5em; margin-bottom: 0.5em; line-height: 1;"><strong style="font-family: Arial, Helvetica, sans-serif;"><div v-show='ddept=="Chemical & Biological Engineering"'> Karen M. Swindler Department of</div>{{ ddept }}</strong></p>
               <p style="margin-top: 0.5em; margin-bottom: 0.5em; line-height: 1;"><span style="font-family: Arial, Helvetica, sans-serif;">South Dakota Mines</span></p>
               <p style="margin-top: 0.5em; margin-bottom: 0.5em; line-height: 1;"><span style="font-family: Arial, Helvetica, sans-serif;">501 E. Saint Joseph St., Rapid City, SD 57701</span></p>
               <p style="margin-top: 0.5em; margin-bottom: 0.5em; line-height: 1;"><span style="font-family: Arial, Helvetica, sans-serif;">{{ dphone }} | <a :href="'mailto:'+ email" style="color: #385E9D;">{{ demail }}</a></span></p>
