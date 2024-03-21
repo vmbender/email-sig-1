@@ -1,10 +1,9 @@
+import 'babel-polyfill'
 import Vue from 'vue'
 import VeeValidate, {Validator} from 'vee-validate'
 import App from './App'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import Clipboard from 'v-clipboard'
-import 'core-js/stable'
-import 'regenerator-runtime/runtime'
 
 Vue.use(BootstrapVue);
 Vue.use(VeeValidate);
