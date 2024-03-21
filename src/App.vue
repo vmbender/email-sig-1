@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import Intro from "./components/Intro.vue";
-import SignatureForm from "./components/SignatureForm.vue"
-import Instructions from "./components/Instructions.vue"
+import Intro from './components/Intro.vue';
+import SignatureForm from './components/SignatureForm.vue';
+import Instructions from './components/Instructions.vue'
 
 export default {
   name: "App",
