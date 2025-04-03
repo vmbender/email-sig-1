@@ -16,7 +16,7 @@ import SignatureForm from './components/SignatureForm.vue';
 import Instructions from './components/Instructions.vue'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     Intro,
     SignatureForm,
