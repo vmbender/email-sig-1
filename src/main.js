@@ -5,6 +5,7 @@ import App from './App'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import Clipboard from 'v-clipboard'
 
+
 Vue.use(BootstrapVue);
 Vue.use(VeeValidate);
 Vue.use(IconsPlugin);
@@ -33,6 +34,7 @@ const dictionary = {
   }
 };
 Validator.localize(dictionary);
+
 
 new Vue({
   el: '#app',
