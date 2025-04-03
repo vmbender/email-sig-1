@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id='app'>
     <b-container>
       <b-img fluid center alt="South Dakota Mines logo" :src="require('./assets/sig-logo.png')" id="logo"/>
       <Intro />
@@ -20,7 +20,7 @@ export default {
   components: {
     Intro,
     SignatureForm,
-    Instructions,
+    Instructions
   }
 };
 </script>
